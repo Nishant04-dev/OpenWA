@@ -26,6 +26,7 @@
     "dashboard:ci": "cd dashboard && npm ci",
     "dashboard:dev": "cd dashboard && npm run dev",
     "dashboard:build": "cd dashboard && npm run build",
+    "deploy": "wrangler deploy",
     "postinstall": "node scripts/postinstall.js",
     "check:versions": "node scripts/check-doc-versions.mjs",
     "check:dockerignore": "node scripts/check-dockerignore.mjs",
@@ -525,7 +526,7 @@
     "js-yaml": "^5.4.1",
     "fast-uri": "^3.1.8",
     "multer": "2.4.0",
-    "better-sqlite3": "$better-sqlite3",
+    "better-sqlite3": "^13.0.3",
     "socket.io": "$socket.io",
     "typeorm": {
       "ioredis": "$ioredis"

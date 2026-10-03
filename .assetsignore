@@ -1,0 +1,26 @@
+# Exclude source code, tests, docs, node_modules, maps, and temp files
+node_modules/
+.git/
+.github/
+charts/
+data/
+docs/
+scripts/
+sdk/
+src/
+test/
+*.map
+*.spec.ts
+*.spec.js
+*.ts
+*.md
+Dockerfile
+docker-compose*.yml
+nest-cli.json
+tsconfig*.json
+eslint.config.*
+.prettier*
+.env*
+.nvmrc
+.trivyignore
+.dockerignore
