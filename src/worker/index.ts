@@ -1,13 +1,12 @@
-export interface Env {
-  ASSETS: {
-    fetch: (request: Request | string) => Promise<Response>;
-  };
+/// <reference path="../../worker-configuration.d.ts" />
+
+export interface WorkerEnv extends Env {
   OPENWA_BACKEND_URL?: string;
   NODE_ENV?: string;
 }
 
 export default {
-  async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
+  async fetch(request: Request, env: WorkerEnv, ctx: ExecutionContext): Promise<Response> {
     const url = new URL(request.url);
     const pathname = url.pathname;
 
@@ -71,7 +70,6 @@ export default {
             status: 'ok',
             service: 'OpenWA Cloudflare Gateway',
             timestamp: new Date().toISOString(),
-            uptime: process.uptime ? process.uptime() : 0,
           }),
           {
             status: 200,
